@@ -25,7 +25,6 @@ describe('Tree module should', () => {
     expect(tree.root.value).toBe(12);
 
     tree.add(18);
-    console.log(tree.root.right);
     expect(tree.root.right.value).toBe(18);
 
     tree.add(24);
@@ -33,7 +32,7 @@ describe('Tree module should', () => {
   });
 
   //remove
-  xit('remove the last node from on the left side', () => {
+  it('remove the last node from on the left side', () => {
 
     let tree = new Tree;
     tree.add(10);
@@ -45,6 +44,21 @@ describe('Tree module should', () => {
     expect(tree.root.left.value).toBe(5);
     expect(tree.root.right.value).toBe(15);
     expect(tree.root.left.left).toBeNull();
+  });
+
+
+  it('remove the last node from the right side', () => {
+    
+    let tree = new Tree;
+    tree.add(10);
+    tree.add(5);
+    tree.add(15);
+    tree.add(20);
+    tree.remove(20);
+
+    expect(tree.root.left.value).toBe(5);
+    expect(tree.root.right.value).toBe(15);
+    expect(tree.root.right.right).toBeNull();
   });
 
   //find
