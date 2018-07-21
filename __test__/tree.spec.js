@@ -62,15 +62,15 @@ describe('Tree module should', () => {
   });
 
   //find
-  xit('be able to find a specified node within the tree', () => {
+  it('be able to find a specified node within the tree', () => {
 
     let tree = new Tree;
     tree.add(10);
     tree.add(5);
     tree.add(15);
 
-    expect(tree.find(5).value).toBe(5);
-    expect(tree.find(15).value).toBe(15);
+    expect(tree.find(tree.root, 5)).toBe(5);
+    expect(tree.find(tree.root, 15)).toBe(15);
   });
 
   //serialize
