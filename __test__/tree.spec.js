@@ -5,7 +5,7 @@ const Tree = require('../lib/tree.js');
 describe('Tree module should', () => {
 
   //add
-  xit('add a node to the left branch if the desired value is less than the root value', () => {
+  it('add a node to the left branch if the desired value is less than the root value', () => {
 
     let tree = new Tree;
     tree.add(12);
@@ -18,7 +18,7 @@ describe('Tree module should', () => {
     expect(tree.root.left.left.value).toBe(3);
   });
 
-  xit('add a node to the right branch if the desired value is greater than the root value', () => {
+  it('add a node to the right branch if the desired value is greater than the root value', () => {
     
     let tree = new Tree;
     tree.add(12);
@@ -32,7 +32,7 @@ describe('Tree module should', () => {
   });
 
   //remove
-  xit('remove the last node from on the left side', () => {
+  it('remove the last node from on the left side', () => {
 
     let tree = new Tree;
     tree.add(10);
@@ -47,7 +47,7 @@ describe('Tree module should', () => {
   });
 
 
-  xit('remove the last node from the right side', () => {
+  it('remove the last node from the right side', () => {
     
     let tree = new Tree;
     tree.add(10);
@@ -62,7 +62,7 @@ describe('Tree module should', () => {
   });
 
   //find
-  xit('be able to find a specified node within the tree', () => {
+  it('be able to find a specified node within the tree', () => {
 
     let tree = new Tree;
     tree.add(10);
@@ -74,7 +74,7 @@ describe('Tree module should', () => {
   });
 
   //serialize
-  xit('convert data into stringified form', () => {
+  it('convert data into stringified form', () => {
     let tree = new Tree;
     tree.add(10);
     tree.add(5);
@@ -86,8 +86,14 @@ describe('Tree module should', () => {
   });
 
   //deserialize
-  xit('convert a string into a data tree', () => {
-    expect(undefined).toBeUndefined();
+  it('convert a string into a data tree', () => {
+    
+    let tree = Tree.deserialize([10, 5, null, null, 15, null, null]);
+
+    expect(tree.root.value).toBe(10);
+    expect(tree.root.left.value).toBe(5);
+    expect(tree.root.right.value).toBe(15);
+
   });
 
   
