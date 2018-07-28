@@ -15,10 +15,75 @@ https://github.com/codefellows-seattle-javascript-401n5/15-trees
 1. Clone the repository to your device.
 2. In terminal, enter npm i to install all dependencies.
   - If you are creating a new js file, be sure to require the tree.js file.
-3. Create a new tree object and use tree.add(value). Your list should have a new root node.
-4. Use tree.add(lower than root's value).  You should have a node added to the root's left.
-5. Use tree.add(higher than root's value).  You should have a nde added to the root's right.
-6. Use tree.find(root's left or right value). You should have the value returned to you.
-7. Use tree.remove(root's left or right value).  You should have no left or right now.
-8. Add the removed node again and run tree.serialize().  You should have data converted to text form.
-9. Run tree.deserialize([10, 5, null, null, 15, null, null]).  Data should be back into a tree.
+3. Create a new tree object and use tree.add(value). 
+
+Ex.
+```
+  let tree = new Tree;
+  tree.add(12);
+````
+Your list should have a new root node.
+
+4. Use tree.add(lower than root's value).  
+
+Ex.
+```
+  let tree = new Tree;
+  tree.add(12); //this will be root
+  tree.add(6);
+```
+You should have a node added to the root's left.
+
+5. Use tree.add(higher than root's value).  
+
+Ex.
+```
+  let tree = new Tree;
+  tree.add(12); //this will be root
+  tree.add(18);
+```
+You should have a nde added to the root's right.
+
+6. Use tree.find(root's left or right value). 
+
+Ex. 
+```
+  let tree = new Tree;
+  tree.add(12); //this will be root
+  tree.add(18);
+  tree.add(6);
+  tree.find(tree.root, 6);
+```
+You should have the value returned to you.
+
+7. Use tree.remove(root's left or right value).  
+Ex.
+```
+  let tree = new Tree;
+  tree.add(12); //this will be root
+  tree.add(18);
+  tree.add(6);
+  tree.remove(18);
+```
+You should have no left or right now.
+8. Add the removed node again and run tree.serialize().  
+
+Ex.  
+```
+  let tree = new Tree;
+  tree.add(12); //this will be root
+  tree.add(18);
+  tree.add(6);
+  let results = []
+  tree.serialize(tree.root, results);
+```
+
+You should have data converted to text form.
+
+9. Run tree.deserialize([10, 5, null, null, 15, null, null]).  
+
+Ex.
+```
+  tree.deserialize([10, 5, null, null, 15, null, null])
+```
+Data should be back into a tree.
