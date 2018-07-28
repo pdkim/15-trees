@@ -1,0 +1,28 @@
+{
+  "name": "15-trees",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Tree Data Structure\r ====",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdkim/15-trees.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdkim/15-trees/issues"
+  },
+  "homepage": "https://github.com/pdkim/15-trees#readme",
+  "dependencies": {
+    "eslint": "^5.1.0",
+    "jest": "^23.3.0"
+  }
+}
